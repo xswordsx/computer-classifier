@@ -20,16 +20,16 @@
 ---
 Решенията на експертната система са базирани на следната таблица
 
-Characteristics | Possible values
----------------:|:---------------
-Type            | Laptop / Desktop / Rack
-Processor       | Frequency Slow / Normal / Fast
-Processor       | Count :number
-RAM             | :number
-HDD Capacity    | :number
-Video Power     | Low / Medium / High
-Monitor Size    | :number
-Cooling         | Low / Medium / High
+Characteristics     | Possible values
+-------------------:|:-----------------------
+Type                | Laptop / Desktop / Rack
+Processor Frequency | Slow / Normal / Fast
+Processor Count     | :number
+RAM                 | :number
+HDD Capacity        | :number
+Video Power         | Low / Medium / High
+Monitor Size        | :number
+Cooling             | Low / Medium / High
 
 Работа на системата
 ---
