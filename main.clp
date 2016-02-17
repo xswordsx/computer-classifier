@@ -13,11 +13,11 @@
 (reset)
 (run)
 
-; (printout t crlf crlf)
+(printout t crlf crlf)
 
 ; (load rules/evaluations.clp)
-; (load rules/advantages.clp)
+(load rules/advantages.clp)
 
-; (printout t crlf crlf "[INFO] Entering Evaluation mode... " crlf crlf)
+(printout t crlf crlf "[INFO] Entering Evaluation mode... " crlf crlf)
 
-; (run)
+(run)
