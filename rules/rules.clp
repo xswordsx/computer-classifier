@@ -8,8 +8,8 @@
 
 (defrule assert-machine-type
 	=>
-	(assert (machine-type (capitalize 
-		(ask-question-choice "What's the machine type?"	"laptop" "desktop" "rack")))))
+	(assert (machine-type (eval (capitalize 
+		(ask-question-choice "What's the machine type?"	"laptop" "desktop" "rack"))))))
 
 (defrule assert-cpu-frequency
 	=>
@@ -37,13 +37,13 @@
 
 (defrule assert-hdd-speed
 	=>
-	(assert (hdd-type (capitalize
-		(ask-question-choice "What's the HDD speed?" "slow" "medium" "fast")))))
+	(assert (hdd-speed (eval (capitalize
+		(ask-question-choice "What's the HDD speed?" "slow" "medium" "fast"))))))
 
 (defrule assert-gpu
 	=>
-	(assert (gpu (capitalize
-		(ask-question-choice "What's the GPU class?" "low" "medium" "high")))))
+	(assert (gpu (eval (capitalize
+		(ask-question-choice "What's the GPU class?" "low" "medium" "high"))))))
 
 (defrule assert-monitor-size
 	=>
@@ -53,8 +53,8 @@
 
 (defrule assert-cooling 
 	=>
-	(assert (hdd-type (capitalize
-		(ask-question-choice "What's the cooling?" "normal" "good" "extra")))))
+	(assert (cooling (eval (capitalize
+		(ask-question-choice "What's the cooling?" "normal" "good" "extra"))))))
 
 ; Extra stats
 
@@ -77,6 +77,7 @@
 	(assert (extra vga))))
 
 (defrule assert-extra-dvd
+	=>
 	(if (ask-question-yes-no "Does the machine have a CD/DVD reader?")
 	then
 	(assert (extra dvd))))

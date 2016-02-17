@@ -33,9 +33,8 @@
 
 
 (deffunction assert-intensity "Asserts [?fact-name] with Low / Medium / High"
-    (?fact-name ?value ?mid ?high)
-    (if (< ?value ?mid) then 
-        (bind ?intesity "Low"))
+    (?fact-name ?mid ?high ?value)
+    (bind ?intesity "Low")
     (if (between ?value ?mid ?high) then 
         (bind ?intesity "Medium"))
     (if (>= ?value ?high) then 
