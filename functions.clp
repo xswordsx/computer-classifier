@@ -57,7 +57,12 @@
 (deffunction ask-question "Asks the user a question and returs his input"
     (?question $?additional)
     (printout t (str-cat "[QUES] > " ?question " " (implode$ ?additional) ": "))
-    (read))
+    (bind ?input (read))
+    (if (eq ?input EOF)
+    then
+    	(exit)
+	else
+		?input))
 
 (deffunction ask-question-choice "Asks a question - multiple choice answer"
     (?question $?choices)
